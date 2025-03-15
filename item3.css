@@ -171,7 +171,10 @@ main {
 .recipe-navigation {
     display: flex;
     justify-content: center;
-    margin: 30px auto 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 600px;
 }
 
@@ -195,7 +198,10 @@ main {
 .step {
     display: none;
     padding: 20px;
-    margin: 20px auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -208,6 +214,13 @@ main {
 }
 body:not(:has(:target)) #step1 {
     display: block;
+}
+.step img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 400px; /* Prevents it from getting too large */
+    border-radius: 8px; /* Adds rounded corners */
+    margin: 15px 0; /* Spacing above and below the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
 }
 
 
@@ -366,4 +379,143 @@ footer {
         margin: 2px;
         font-size: 14px;
     }
+}
+
+/* Recipe Details Grid */
+.recipe-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2-column layout */
+    gap: 20px;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Make "Ingredients" span 2 columns */
+.ingredients {
+    grid-column: span 2;
+    background: #f7f3e3;
+    padding: 15px;
+    border-radius: 8px;
+}
+/* Make <ul> a flex container to fit grid items */
+.ingredients ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping on small screens */
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Style each list item */
+.ingredients li {
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+    color: #5a3e1b;
+    flex: 1;
+    min-width: 120px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+/* Style the quantity column */
+.quantity {
+    font-weight: bold;
+    text-align: left;
+    color: #8b5e3b;
+}
+
+/* Style the ingredient name */
+.name {
+    text-align: left;
+    color: #5a3e1b;
+    font-size: 16px;
+}
+
+/* Style for Cooking Time & Nutrition */
+.cooking-time, .nutrition {
+    background: #fdf7e8;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between boxes */
+}
+
+/* Ensure flex containers align in a row and wrap if needed */
+/* Parent Flexbox Container */
+.cooking-time-child, .nutrition-child {
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping on small screens */
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Style Each Box */
+.cooking-time p, 
+.nutrition p {
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+    color: #5a3e1b;
+    flex: 1;
+    min-width: 120px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column; /* Stack label above value */
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+/* Label (Top Text) */
+.label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #8b5e3b;
+}
+
+/* Value (Bottom Text) */
+.value {
+    font-size: 18px;
+    color: #000;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+
+/* Headings */
+.recipe-details h2 {
+    color: #5a3e1b;
+    margin-top: 0px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+/* List Styling */
+.recipe-details ul {
+    list-style-type: none;
+    padding-left: 0.1px;
+    margin: 0;
+}
+
+.recipe-details p {
+    margin: 5px 0;
 }
