@@ -1,0 +1,365 @@
+/* General UI Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f7f3e3; /* Soft Cream */
+    color: #2c2c2c; /* Dark Gray for readability */
+    text-align: center;
+    margin: 0;
+    padding-top: 85px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    border: none;
+    padding: 8px;
+    width: 200px;
+    outline: none;
+}
+
+.search-bar button {
+    background: #8b5e3b;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Added transition */
+}
+
+.search-bar button:hover {
+    background: #6a452c; /* Changed to darker brown for consistency */
+}
+
+/* Header with Fixed Logo */
+.site-header { /* Changed from header to site-header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #efdec5; /* Fixed Warm Beige */
+    padding: 10px;
+    height: 60px;
+    position: fixed; /* Makes the header fixed */
+    top: 0; /* Sticks to the top */
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it's above other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Header Text */
+.site-header h1, .site-header p { /* Updated selector */
+    color: #2c2c2c; /* Dark Gray for contrast */
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Navigation Bar */
+.nav_header ul {
+    list-style: none;
+    display: flex;
+    gap: 0px;
+    padding: 0;
+    margin: 20px;
+}
+
+.nav_header ul li {
+    display: inline;
+}
+
+.nav_header a {
+    text-decoration: none;
+    padding: 5px 10px;
+    background: #8b5e3b; /* Deep Brown */
+    color: white; /* High contrast */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease; /* Added transition */
+}
+
+.nav_header a:hover, .nav_header a:focus {
+    background: #6a452c; /* Changed to darker brown for consistency */
+}
+
+/* Burger Menu Button */
+.burger-menu {
+    display: none; /* Hidden on desktops */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    background: #f7f3e3; /* Match body background */
+    padding: 20px;
+}
+
+/* Article Header */
+.article-header {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 600px; /* Prevents stretching too wide */
+}
+
+.article-header h2 {
+    font-size: 24px;
+    color: #8b5e3b; /* Deep brown for a warm look */
+    margin-bottom: 5px;
+}
+
+.article-header .rating {
+    font-size: 18px;
+    color: #ff9800; /* Gold color for stars */
+    font-weight: bold;
+}
+
+.article-header .author {
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+}
+
+.article-header .date {
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+}
+
+.article-header .meta {
+    display: flex;
+    gap: 15px; /* Adds spacing between elements */
+    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+    align-items: center; /* Aligns items vertically */
+}
+
+/* Article Description Styling */
+.article-header .description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 10px;
+    padding: 10px 15px;
+    max-width: 700px; /* Ensures it doesn't stretch too wide */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Improve readability by adding paragraph spacing */
+.article-header .description p {
+    margin-bottom: 10px;
+}
+
+.article-header img{
+    width: 100%;
+}
+
+/* Recipe navigation tabs */
+.recipe-navigation {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto 20px;
+    max-width: 600px;
+}
+
+.step-link {
+    padding: 8px 15px;
+    background: #efdec5;
+    color: #8b5e3b;
+    border-radius: 5px 5px 0 0;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+    border: 1px solid #d4c5a8;
+    border-bottom: none;
+}
+
+.step-link:hover, .step-link:focus {
+    background: #d4c5a8;
+}
+
+/* Step Sections */
+.step {
+    display: none;
+    padding: 20px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+/* Show the targeted step */
+.step:target {
+    display: block;
+}
+
+/* Hide step1 when another step is targeted */
+#step2:target ~ #step1,
+#step3:target ~ #step1,
+#step4:target ~ #step1 {
+    display: none;
+}
+
+/* Navigation Buttons */
+a {
+    display: inline-block;
+    padding: 12px 18px;
+    margin: 10px;
+    background: #8b5e3b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+a:hover, a:focus {
+    background: #6a452c;
+}
+
+/* Restart Button */
+.restart {
+    background: #dc3545;
+}
+
+.restart:hover, .restart:focus {
+    background: #a71d2a;
+}
+
+/* Accessibility */
+.step:focus-within {
+    outline: 3px solid #8b5e3b;
+}
+
+/* Search icon styling */
+.search-icon {
+    display: inline-block;
+}
+
+/* Footer styling */
+footer {
+    padding: 20px;
+    background: #efdec5;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 65px; /* Adjusted for smaller header on mobile */
+    }
+    
+    .site-header { /* Updated selector */
+        height: 50px; /* Smaller header on mobile */
+    }
+    
+    .logo {
+        width: 120px; /* Smaller logo on mobile */
+    }
+    
+    .burger-menu {
+        display: block; /* Show on mobile */
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav_header {
+        position: absolute;
+        top: 60px; /* Adjusted to match smaller header */
+        right: 10px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 150px; /* Fixed width */
+        z-index: 100;
+        overflow: hidden;
+        display: none;
+        padding: 10px;
+    }
+    
+    /* Show the menu when active class is added */
+    .nav_header.active {
+        display: block;
+    }
+    
+    /* Fix menu item alignment */
+    .nav_header ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav_header ul li {
+        display: block;
+        margin: 3px 0;
+        width: 100%;
+    }
+    
+    /* Fix button spacing */
+    .nav_header a {
+        display: block;
+        text-decoration: none;
+        padding: 8px 0; /* Vertical padding only */
+        background: #8b5e3b;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        width: 100%; /* Full width */
+        text-align: center;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 14px; /* Slightly smaller font */
+    }
+    
+    .nav_header a:hover {
+        background: #6a452c;
+    }
+    
+    /* Adjust article header for mobile */
+    .article-header {
+        padding: 0 10px;
+    }
+    
+    /* Make step sections full width on mobile */
+    .step {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    /* Improve button spacing on mobile */
+    a {
+        padding: 10px 15px;
+        margin: 5px;
+    }
+    
+    /* Adjust recipe navigation for mobile */
+    .recipe-navigation {
+        flex-wrap: wrap;
+    }
+    
+    .step-link {
+        padding: 6px 10px;
+        margin: 2px;
+        font-size: 14px;
+    }
+}
