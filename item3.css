@@ -207,6 +207,8 @@ main {
     display: block;
 }
 
+
+
 /* Hide step1 when another step is targeted */
 #step2:target ~ #step1,
 #step3:target ~ #step1,
