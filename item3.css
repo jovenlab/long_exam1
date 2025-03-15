@@ -107,64 +107,86 @@ main {
     padding: 20px;
 }
 
-/* Article Header */
+/* Enhanced Article Header */
 .article-header {
-    text-align: left;
-    margin: 20px auto;
-    max-width: 600px; /* Prevents stretching too wide */
+    text-align: center;
+    margin: 30px auto 40px;
+    max-width: 800px;
+    padding: 0 15px;
 }
 
-.article-header h2 {
-    font-size: 24px;
-    color: #8b5e3b; /* Deep brown for a warm look */
-    margin-bottom: 5px;
-}
-
-.article-header .rating {
-    font-size: 18px;
-    color: #ff9800; /* Gold color for stars */
-    font-weight: bold;
-}
-
-.article-header .author {
-    font-size: 16px;
-    font-style: italic;
-    color: #555;
-}
-
-.article-header .date {
-    font-size: 16px;
-    font-style: italic;
-    color: #555;
+.article-header h1 {
+    font-size: 2.5rem;
+    color: #6a452c;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    font-weight: 700;
 }
 
 .article-header .meta {
     display: flex;
-    gap: 15px; /* Adds spacing between elements */
-    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
-    align-items: center; /* Aligns items vertically */
-}
-
-/* Article Description Styling */
-.article-header .description {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 25px;
     font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    text-align: justify;
-    margin-top: 10px;
-    padding: 10px 15px;
-    max-width: 700px; /* Ensures it doesn't stretch too wide */
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* Improve readability by adding paragraph spacing */
-.article-header .description p {
-    margin-bottom: 10px;
+.article-header .rating {
+    font-size: 18px;
+    color: #ff9800;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-.article-header img{
+.article-header .author {
+    color: #8b5e3b;
+    font-weight: 500;
+}
+
+.article-header .date {
+    color: #666;
+}
+
+.article-header figure {
+    margin: 0 0 25px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.article-header img {
     width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.article-header img:hover {
+    transform: scale(1.02);
+}
+
+.article-header .description {
+    font-size: 17px;
+    color: #444;
+    line-height: 1.7;
+    text-align: left;
+    background: rgba(239, 222, 197, 0.3);
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 4px solid #8b5e3b;
+}
+
+.article-header .description p {
+    margin-bottom: 15px;
+}
+
+.article-header .description p:last-child {
+    margin-bottom: 0;
 }
 
 /* Recipe navigation tabs */
@@ -353,8 +375,18 @@ footer {
     }
     
     /* Adjust article header for mobile */
-    .article-header {
-        padding: 0 10px;
+    .article-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .article-header .meta {
+        gap: 15px;
+        font-size: 14px;
+    }
+    
+    .article-header .description {
+        padding: 15px;
+        font-size: 16px;
     }
     
     /* Make step sections full width on mobile */
