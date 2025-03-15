@@ -206,7 +206,9 @@ main {
 .step:target {
     display: block;
 }
-
+body:not(:has(:target)) #step1 {
+    display: block;
+}
 
 
 /* Hide step1 when another step is targeted */
