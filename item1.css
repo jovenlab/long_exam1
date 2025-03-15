@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    padding: 0 20px 20px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Newsfeed (2 parts) | Sidebar (1 part) */
+    gap: 20px;
+}
+
+.newsfeed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-card {
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+    align-items: center; /* Centers the image vertically */
+}
+
+
+.news-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.news-card img {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 15px; /* Ensures consistent padding */
+    flex: 1; /* Allows text to take remaining space */
+}
+.news-content h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+.date {
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    font-size: 14px;
+    color: #555;
+}
+
+.news-content a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.news-content a:hover {
+    color: #00376e; 
+    text-decoration: underline;
+}
+
+.sidebar {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.sidebar a:hover {
+    color: #005bb5;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .news-container {
+        grid-template-columns: 1fr; /* Stack elements */
+    }
+
+    .news-card {
+        flex-direction: column;
+        align-items: stretch;
+        
+    }
+
+    .news-card img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .sidebar {
+        margin-top: 20px;
+    }
+}
