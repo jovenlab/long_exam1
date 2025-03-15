@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: #dcedfe;
+    padding-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    padding-bottom: 10px;
+}
+.blue{
+    text-decoration: none;
+    color: blue;
+}
+
+.navbar{
+    display: flex;
+
+}
+.navbarimage{
+    height: 50px;
+}
+
+.links{
+    margin-left:200px;
+}
+
+.search{
+    margin-top: 10px;
+    margin-left: 450px;
+}
+
+.search-icon{
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    
+}
+
+.notifications{
+    border: 1px solid grey;
+    margin-left: 20px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.sidebar{
+    width: 200px;
+    height: 100rem;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+h5{
+    padding: 8px;
+    color: gray;
+    padding-left: 10px;
+}
+.submit{
+    margin-top:30px;
+    border: 1px solid grey;
+    justify-content: center;
+    background-color: #dcedff;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+    color: grey;
+}
+.create{
+    margin-top:30px;
+    border: 1px solid black;
+    justify-content: center;
+    background-color: skyblue;
+}
+
+.link-item{
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.sidebarpic{
+    padding-top: 30px;
+    width: 150px;
+    height: 150px;
+}
+
+.tiny{
+    margin-left: auto;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+}
+
+.topic{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid grey;
+}
+
+.article{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    width:45rem;
+    padding:10px;
+}
+.links{
+    margin-top: 13px;
+}
+
+.article-img{
+    width: 80px;
+    height: 50px;
+}
+.orange{
+    color:orange;
+}
+
+.number{
+    margin-left: 30px;
+    color: grey;
+    display: flex;
+    align-items: center;
+}
+.react{
+    display: flex;
+    flex-direction: column;
+}
+.center{
+    display: flex;
+    align-items: center;
+}
+
+.reactions{
+    margin-left: 30px;
+    display: flex;
+    
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.image{
+    margin-left: 10px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+}
+.menu-items:not(:first-child) {
+    margin-left: 20px;
+}
+.menu-items{
+    font-weight: bold;
+}
+pre{
+    color: grey;
+    font-weight: bold;
+}
+
+.right-bar{
+    background-color: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    border-top: 1px solid black;
+    margin-top: 10px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    
+    padding-left: 20px;
+}
+.red{
+    color: red;
+}
+
+.points-container{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.votes{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.info2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    justify-content: center;
+}
+
+.info3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comments-section{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid black;
+    margin-top: 15px;
+}
+
+.search-and-button{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.input-search{
+    width:30rem;
+    height:40px;
+}
+.save-button{
+    width: 50px;
+}
+.reply{
+    margin-left: 30px;
+}
+.reply1{
+    margin-left: 60px;
+}
+.reply2{
+    margin-left: 90px;
+}
+
+.one-set{
+    display: flex;
+    flex-direction: row;
+}
+
+.navimg{
+    margin-top: 6px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.more{
+    margin-top: 10px;
+    color:blue;
+}
+
+.grey{
+    color: grey;
+}
+
+.span{
+    color: grey;
+}
+
+.set2{
+    display: flex;
+    flex-direction: column;
+}
+
+.column-direction{
+    display: flex;
+    flex-direction: column;
+}
+
+.indent{
+    margin-left: 20px;
+}
+
+.row-direction{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
